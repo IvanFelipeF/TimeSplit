@@ -1,0 +1,130 @@
+/* Paleta baseada na logo:
+   - Azul-claro: #A2D6F9
+   - Azul-escuro: #264653
+   - Bege/laranja claro: #F4A261
+   - Branco: #ffffff
+   - Preto suave: #1a1a1a
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #264653;
+
+    header {
+        background-color: #1a1a1a;
+        padding: 1rem 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .logo {
+            height: 75px;
+        }
+
+        nav {
+            display: flex;
+            gap: 1.5rem;
+
+            a {
+                color: #ffffff;
+                text-decoration: none;
+                font-weight: 500;
+                font-size: 20px;
+                transition: color 0.3s;
+            }
+
+            a:hover {
+                color: #F4A261;
+            }
+        }
+
+        .jogar {
+            background-color: #F4A261;
+            border: none;
+            color: #ffffff;
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .jogar:hover {
+            background-color: #e58a3e;
+        }
+
+    }
+
+    main {
+        .section-banner {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            height: 90vh;
+            background: url('/assets/telaDeFundo.png') no-repeat center center/cover;
+            color: #ffffff;
+            padding-right: 5%;
+
+            .banner-txt {
+                max-width: 500px;
+                text-align: left;
+                background-color: rgba(38, 70, 83, 0.75);
+                padding: 2rem;
+                border-radius: 16px;
+                backdrop-filter: blur(5px);
+
+                .title-logo {
+                    max-width: 100%;
+                    height: auto;
+                    margin-bottom: 1.5rem;
+                }
+
+                .hero-text p {
+                    font-size: 1.2rem;
+                    margin-bottom: 1.5rem;
+                    line-height: 1.6;
+                }
+
+                .buttons {
+                    display: flex;
+                    gap: 1rem;
+
+                    .jogar-btn {
+                        padding: 0.8rem 1.4rem;
+                        font-weight: bold;
+                        border: none;
+                        border-radius: 8px;
+                        cursor: pointer;
+                        transition: 0.3s ease;
+                    }
+
+                    .jogar-btn {
+                        margin-top: 1rem;
+                        background-color: #A2D6F9;
+                        color: #1a1a1a;
+                    }
+
+                    .jogar-btn:hover {
+                        background-color: #81c3eb;
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
