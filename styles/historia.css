@@ -1,0 +1,199 @@
+:root {
+    --primary-color: #5ac8fa;
+    --accent-color: #f5c542;
+    --text-color: #1f1f1f;
+    --bg-color: #f0f0f0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: #264653;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    header {
+        background-color: #1a1a1a;
+        padding: 1rem 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 1rem;
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 32px;
+            color: #f0f0f0;
+            cursor: pointer;
+        }
+
+        .logo {
+            height: 75px;
+            max-width: 100%;
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+
+            nav {
+                display: flex;
+                gap: 1.5rem;
+                flex-wrap: wrap;
+                align-items: center;
+
+                a {
+                    color: #f0f0f0;
+                    text-decoration: none;
+                    font-weight: 500;
+                    font-size: 20px;
+                    transition: color 0.3s;
+                }
+
+                a:hover {
+                    color: #F4A261;
+                }
+            }
+
+            .jogar {
+                background-color: #F4A261;
+                border: none;
+                color: #f0f0f0;
+                padding: 0.6rem 1.2rem;
+                border-radius: 8px;
+                font-weight: bold;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+
+            .jogar:hover {
+                background-color: #e58a3e;
+            }
+        }
+    }
+    main {
+        padding: 60px 20px;
+        flex: 1;
+
+        .historia-section {
+            background-color: var(--bg-color);
+
+            .historia-container {
+                max-width: 800px;
+                margin: 0 auto;
+                background: white;
+                padding: 40px;
+                border-radius: 16px;
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+                h1 {
+                    font-size: 36px;
+                    color: var(--primary-color);
+                    margin-bottom: 24px;
+                    text-align: center;
+
+                }
+                p {
+                    font-size: 18px;
+                    line-height: 1.8;
+                    margin-bottom: 20px;
+                }
+
+                strong {
+                    color: var(--accent-color);
+                }
+            }
+        }
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+
+    body,
+    html {
+        header {
+            align-items: center;
+
+            .menu-toggle {
+                display: block;
+
+            }
+
+            .logo {
+                justify-content: center;
+            }
+
+            .nav-container {
+                flex-direction: column;
+                align-items: flex-start;
+                width: 100%;
+                display: none;
+            }
+
+            .nav-container.active {
+                display: flex;
+            }
+
+            nav {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .jogar {
+                width: 100%;
+                margin-top: 1rem;
+            }
+        }
+        main {
+            padding: 60px 20px;
+
+            .historia-section {
+                background-color: var(--bg-color);
+
+                .historia-container {
+                    max-width: 800px;
+                    margin: 0 auto;
+                    background: white;
+                    padding: 40px;
+                    border-radius: 16px;
+                    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+
+                    h1 {
+                        font-size: 36px;
+                        color: var(--primary-color);
+                        margin-bottom: 24px;
+                        text-align: center;
+                    }
+
+                    p {
+                        font-size: 18px;
+                        line-height: 1.8;
+                        margin-bottom: 20px;
+                        strong {
+                            color: var(--accent-color);
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+}
