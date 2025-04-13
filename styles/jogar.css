@@ -1,24 +1,14 @@
-:root {
-    --primary-color: #5ac8fa;
-    --accent-color: #f5c542;
-    --text-color: #1f1f1f;
-    --bg-color: #f0f0f0;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
-}
+/* jogar.css */
 
 body {
-    background-color: var(--bg-color);
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #ffffff;
     color: #264653;
+    margin: 0;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    
+    margin: 0;
 
     header {
         background-color: #1a1a1a;
@@ -60,14 +50,13 @@ body {
                     font-weight: 500;
                     font-size: 20px;
                     transition: color 0.3s;
-                    display: flex;
-                    text-align: right
                 }
 
                 a:hover {
                     color: #F4A261;
                 }
             }
+
             .jogar {
                 background-color: #F4A261;
                 border: none;
@@ -84,47 +73,43 @@ body {
             }
         }
     }
+
     main {
-        padding: 60px 20px;
-        flex: 1;
+        .jogar-agora {
+            padding: 1rem 1rem;
+            text-align: center;
 
-        .historia-section {
-            background-color: var(--bg-color);
+            h1 {
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+                color: #0e3a4e;
+            }
 
-            .historia-container {
-                max-width: 800px;
+            p {
+                font-size: 1.1rem;
+                margin-bottom: 2rem;
+                color: #444;
+            }
+            .jogo-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
                 margin: 0 auto;
-                background: white;
-                padding: 40px;
-                border-radius: 16px;
-                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-                h1 {
-                    font-size: 36px;
-                    color: var(--primary-color);
-                    margin-bottom: 24px;
-                    text-align: center;
-
-                }
-                p {
-                    font-size: 18px;
-                    line-height: 1.8;
-                    margin-bottom: 20px;
-                }
-
-                strong {
-                    color: var(--accent-color);
+                iframe {
+                    width: 100%;
+                    max-width: 960px;
+                    height: 540px;
+                    border: none;
+                    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+                    border-radius: 10px;
                 }
             }
         }
+
     }
 }
 
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #1a1a1a;
-    color: #f0f0f0;
-}
 
 @media (max-width: 768px) {
 
@@ -148,54 +133,31 @@ footer {
                 align-items: center;
                 width: 100%;
                 display: none;
+
                 nav {
                     flex-direction: column;
                     width: 100%;
+
                     .jogar {
                         width: 100%;
-                        margin-top: 1rem;                
+                        margin-top: 1rem;
                     }
                 }
             }
+
             .nav-container.active {
                 display: flex;
             }
-            
 
-        }
-        main {
-            padding: 60px 20px;
-
-            .historia-section {
-                background-color: var(--bg-color);
-
-                .historia-container {
-                    max-width: 800px;
-                    margin: 0 auto;
-                    background: white;
-                    padding: 40px;
-                    border-radius: 16px;
-                    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-
-                    h1 {
-                        font-size: 36px;
-                        color: var(--primary-color);
-                        margin-bottom: 24px;
-                        text-align: center;
-                    }
-
-                    p {
-                        font-size: 18px;
-                        line-height: 1.8;
-                        margin-bottom: 20px;
-                        strong {
-                            color: var(--accent-color);
-                        }
-                    }
-                }
-            }
 
         }
     }
-
+}
+footer {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: auto;
+    background-color: #1a1a1a;
+    padding: 1rem;
+    color: #f0f0f0;
 }
